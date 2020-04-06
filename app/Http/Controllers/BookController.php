@@ -9,9 +9,9 @@ class BookController extends Controller {
 		return 'this is /book/index';
 	}
 
-	public function author($id) {
+	public function author($id = null) {
 		if ($id) {
-			return 'this is /book/author with id';
+			return 'this is /book/author with id ' . $id;
 		} else {
 			return 'this is /book/author without id';
 		};
