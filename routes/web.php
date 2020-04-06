@@ -18,5 +18,5 @@ Route::get('/', function () {
 });
 Route::prefix('book')->group(function () {
 	Route::get('index', 'BookController@index');
-	Route::get('author', 'BookController@author');
+	Route::get('author/{id?}', 'BookController@author');
 });
