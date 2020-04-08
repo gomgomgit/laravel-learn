@@ -6,15 +6,15 @@ use Illuminate\Http\Request;
 
 class BookController extends Controller {
 	public function index() {
-		return 'this is /book/index';
+		return view('book.index');
 	}
 
-	public function author($id = null) {
-		if ($id) {
-			return 'this is /book/author with id ' . $id;
+	public function author($name = null) {
+		if ($name) {
+			return view('book.anauthor')->with('name', $name);
 		} else {
-			return 'this is /book/author without id';
-		};
+			return view('book.author');
+		}
 	}
 
 	public function store(Request $request) {
